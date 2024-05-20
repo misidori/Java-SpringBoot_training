@@ -1,0 +1,36 @@
+Creare un'applicazione per gestire un negozio di libri. Si richiede di implementare le seguenti componenti:
+
+1 - Classe Libro: Definire una classe Libro con i seguenti attributi:
+        titolo (String): il titolo del libro.
+        autore (String): l'autore del libro.
+        genere (Genere): il genere del libro, utilizzando un'enumerazione Genere.
+        prezzo (double): il prezzo del libro.
+
+2 - Interfaccia Vendibile: Definire un'interfaccia chiamata Vendibile con il seguente metodo:
+        double calcolaPrezzo(): un metodo che restituisce il prezzo del libro.
+
+3 - Enumerazione Genere: Definire un'enumerazione chiamata Genere che rappresenta i generi dei libri.
+        Almeno tre generi dovrebbero essere inclusi, ad esempio FANTASY, ROMANZO, THRILLER, ecc.
+
+4 - Implementazione del main: Nel metodo main, creare almeno tre istanze di libri con dati di esempio e
+        stampare le informazioni di ciascun libro, inclusi titolo, autore, genere e prezzo.
+
+5 - LibroDigitale: Definire una classe LibroDigitale includa tutti i membri della classe Libro.
+        Questa classe dovrebbe includere anche un attributo formato (ad esempio PDF) e un attributo dimensione per rappresentare le dimensioni del file.
+        Implementare i metodi necessari.
+
+6 - Interfaccia Scontabile: Creare un'interfaccia chiamata Scontabile che includa il seguente metodo:
+        double calcolaPrezzoScontato(): un metodo che calcola il prezzo scontato del libro.
+
+7 - Implementazione degli sconti: Modificare la classe Libro in modo che implementi anche l'interfaccia Scontabile.
+        Ogni libro dovrebbe avere un prezzo scontato, che è il 10% in meno del prezzo normale.
+
+8 - Classe Main aggiornata: Modificare il metodo main per includere la creazione di almeno un'istanza
+        di LibroDigitale e testare il calcolo del prezzo scontato.
+
+9 - Creare un metodo "creaLibro" che prenda in input 2 stringhe, 1 Integer, 1 double e ritorna un nuovo Libro popolato.
+    Il tutto dentro una nuova classe Libreria
+    Il metodo "creaLibro" deve:
+        se il prezzo è > 20 stampare un errore descrittivo;
+        in input il metodo prende un Integer ed eseguirà il match con la enum Genere, così:
+            FANTASY = 1, THRILLER = 2, ROMANZO = 3
