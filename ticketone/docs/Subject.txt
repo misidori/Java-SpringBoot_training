@@ -1,0 +1,11 @@
+L'obiettivo di questa esercitazione è quello di creare un'applicazione Spring Boot che esponedelle API REST per gestire un sistema salta coda, utilizzando Spring, Java 17 e PostgreSQL come database. 
+
+L'applicazione permetterà di creare, visualizzare, aggiornare e cancellare i bigliettinumerici per diverse attrazioni.
+Va implementato un software che gestisce i ticket in base alle attrazioni e l'estrazione eassegnazione ad un determinato utente.
+L'attrazione deve poter configurare tempo di scadenza con la quale si calcola la validità delticket ed il massimo numero di ticket generabili quotidianamente.
+Il ticket deve essere estratto e poi successivamente assegnato ad un utente.
+Vanno previste, oltre le API REST per gestire la logica di business, anche tutte le CRUDnecessarie per poter gestire utenti e attrazioni.
+Vanno previsti degli scheduler:- uno per l'invalidazione del biglietto se non ancora assegnato ma che risulta scaduto- uno per simulare l'estrazione del biglietto che verrà assegnato all'utenteGli stati dei ticket devono essere calcolati in base alle date e non con dei booleanila nomenclatura di classi, tabelle e attributi dovrà essere in ingleseDiagramma ER del Database (PostgreSQL)
+• Attraction◦ ID (Primary Key)◦ Nome◦ Descrizione◦ Durata Validità Biglietto (giorni)
+• User◦ ID (Primary Key)◦ Nome◦ Email
+• Ticket◦ ID (Primary Key)◦ Numero◦ Data di Emissione◦ Data di Scadenza◦ Data di Chiamata◦ FK Attraction ID (Foreign Key)◦ FK User ID (Foreign Key)
